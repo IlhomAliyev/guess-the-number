@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'aliyev-ilhom-icons-font';
+  src:  url('./../iconsfont/aliyev-ilhom-icons-font.eot?5qgps2');
+  src:  url('./../iconsfont/aliyev-ilhom-icons-font.eot?5qgps2#iefix') format('embedded-opentype'),
+    url('./../iconsfont/aliyev-ilhom-icons-font.ttf?5qgps2') format('truetype'),
+    url('./../iconsfont/aliyev-ilhom-icons-font.woff?5qgps2') format('woff'),
+    url('./../iconsfont/aliyev-ilhom-icons-font.svg?5qgps2#aliyev-ilhom-icons-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"]::before, [class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'aliyev-ilhom-icons-font' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-editable-ilhom-aliyev-logo:before {
+  content: "\e900";
+}
+.icon-editable-telegram-qr-code:before {
+  content: "\e901";
+}
