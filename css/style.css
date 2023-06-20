@@ -1,195 +1,220 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    font-family: 'Montserrat';
-    background: url('./../img/background.jpg') center / cover no-repeat;
-    min-height: 100vh;
+  margin: 0;
+  font-family: "Montserrat";
+  min-height: 100vh;
+  color: white;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -10;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    height: 90vh;
-    width: 1000px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  height: 90vh;
+  width: 1100px;
+  padding: 50px 50px 0;
+  margin: 0 auto;
 }
 
-h1 {
-    color: white;
-    text-transform: uppercase;
-    font-size: 30pt;
-    text-shadow: 0 0 5px rgb(15, 15, 15);
-    margin: 0 0 5px 0;
+header {
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
 }
 
-#comment-text {
-    font-size: 14pt;
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    margin: 0 0 30px 0;
-    font-weight: 300;
-    transition: 0.5s;
+.name-wrapper {
+  flex: 1 1 auto;
+}
+.name-wrapper h1 {
+  text-transform: uppercase;
+  font-size: 24pt;
+  text-shadow: 0 0 5px rgb(15, 15, 15);
+  margin-bottom: 5px;
+}
+.name-wrapper #hint {
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 14pt;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  transition: 200ms;
+}
+.name-wrapper #hint:hover {
+  background-color: rgba(65, 105, 225, 0.5);
+  box-shadow: 0 2px 5px 1px rgba(22, 22, 22, 0.5);
+  transform: translateY(-2px);
+  padding: 5px;
+  margin: -5px;
+  outline: 0;
+}
+.name-wrapper #hint:active {
+  transform: translateY(0px);
+  transition: 100ms;
+  box-shadow: none;
 }
 
-#comment-text:is(:hover, :focus) {
-    color: royalblue;
-    transform: scale(1.5);
-    font-weight: bold;
-    outline: 0;
+.lifes-block {
+  flex: 0 1 40%;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 16pt;
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 5px rgb(15, 15, 15);
+  transition: 300ms;
 }
 
 .indicator-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(3px);
-    padding: 20px;
-    border-radius: 20px;
-    transition: 0.5s;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  padding: 20px;
+  border-radius: 20px;
+  transition: 500ms;
 }
-
 .indicator-wrapper:hover {
-    background-color: rgba(65, 105, 225, 0.2);
+  background-color: rgba(65, 105, 225, 0.2);
 }
-
 .indicator-wrapper:hover .indicator {
-    box-shadow: 0 0 10px 1px rgb(22, 22, 22);
-    background-color: white;
+  box-shadow: 0 0 10px 1px rgb(22, 22, 22);
+  opacity: 1 !important;
 }
 
 .indicator {
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(3px);
-    color: white;
-    text-align: center;
-    text-shadow: 0 0 5px black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
+  background-color: white;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-radius: 50%;
+  opacity: 0.6;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 5px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
 }
-
 .indicator_black {
-    /* background-color: rgba(0, 0, 0, 0.6); */
-    height: 75px;
-    width: 75px;
-    font-size: 8pt;
+  height: 75px;
+  width: 75px;
+  font-size: 8pt;
 }
-
 .indicator_red {
-    /* background-color: rgba(255, 0, 0, 0.6); */
-    height: 100px;
-    width: 100px;
-    font-size: 12pt;
+  height: 100px;
+  width: 100px;
+  font-size: 12pt;
 }
-
 .indicator_yellow {
-    /* background-color: rgba(255, 255, 0, 0.6); */
-    height: 125px;
-    width: 125px;
-    font-size: 14pt;
+  height: 125px;
+  width: 125px;
+  font-size: 14pt;
 }
-
 .indicator_green {
-    /* background-color: rgba(1, 198, 1, 0.6); */
-    height: 150px;
-    width: 200px;
-    border-radius: 50px;
-    font-size: 16pt;
+  height: 150px;
+  width: 200px;
+  border-radius: 50px;
+  font-size: 16pt;
 }
 
 .buttons-wrapper {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-.lifes-count {
-    flex: 1 1 33.333%;
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(3px);
-    color: white;
-    text-align: center;
-    font-size: 16pt;
-    height: 100%;
-    margin: 0;
-    border-radius: 20px;
-    padding: 15px;
-    box-sizing: border-box;
-    transition: 0.3s;
+#restart-btn {
+  display: none;
 }
 
 button {
-    flex: 1 1 33.333%;
-    display: block;
-    box-sizing: border-box;
-    padding: 15px;
-    font-size: 16pt;
-    border: 0;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(3px);
-    color: white;
-    transition: 0.3s;
-    cursor: pointer;
-    font-family: 'Montserrat';
+  cursor: pointer;
+  flex: 1 1 50%;
+  padding: 15px;
+  font-size: 16pt;
+  border: 0;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  color: white;
+  transition: 300ms;
+  font-family: "Montserrat";
 }
-
-button:is(:hover, :focus),
-.lifes-count:is(:hover, :focus) {
-    background-color: rgba(65, 105, 225, 0.7);
-    color: white;
-    transform: scale(1.03);
-    outline: 0;
-}
-
-button:active {
-    transform: scale(0.92);
-    transition: 0.1s;
-    box-shadow: none;
-}
-
 button:disabled {
-    background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+button:hover:enabled, button:focus-visible:enabled {
+  box-shadow: 0 5px 10px 1px rgba(22, 22, 22, 0.5);
+  transform: translateY(-5px);
+  background-color: rgba(65, 105, 225, 0.7);
+  color: white;
+  outline: 0;
+}
+button:active:enabled {
+  box-shadow: none;
+  transform: translateY(0px);
+  transition: 100ms;
 }
 
 .link-wrapper {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .ilhom-aliyev-icon {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 50px;
-    line-height: 0;
-    color: white;
-    margin: 0 20px 20px 0;
-    transition: 0.5s;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 0;
+  color: white;
+  margin: 0 20px 20px 0;
+  transition: 0.5s;
 }
-
-.ilhom-aliyev-icon:hover,
-.ilhom-aliyev-icon:focus {
-    color: rgb(65, 105, 225);
-    transform: scale(1.1);
-    outline: 0;
+.ilhom-aliyev-icon:hover, .ilhom-aliyev-icon:focus {
+  color: rgb(65, 105, 225);
+  transform: scale(1.1);
+  outline: 0;
 }
-
 .ilhom-aliyev-icon:active {
-    transform: scale(0.92);
-    transition: 0.1s;
-}
+  transform: scale(0.92);
+  transition: 0.1s;
+}/*# sourceMappingURL=style.css.map */

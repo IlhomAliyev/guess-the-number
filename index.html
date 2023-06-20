@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="./css/iconsfont.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="./img/editable-ilhom-aliyev-logo.svg" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="stylesheet" href="./iconsfont/iconsfont.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="icon"
+      href="./img/editable-ilhom-aliyev-logo.svg"
+      type="image/x-icon"
+    />
     <title>Угадай число!</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <h1>Угадай число!</h1>
-        <a id="comment-text" target="_blank" href="https://letmegooglethat.com/?q=%D1%87%D0%B8%D1%81%D0%BB%D0%B0+%D0%BE%D1%82+1+%D0%B4%D0%BE+9">от 1 до 9</a>
-        <div class="indicator-wrapper">
-            <div class="indicator indicator_black"></div>
-            <div class="indicator indicator_red"></div>
-            <div class="indicator indicator_yellow"></div>
-            <div class="indicator indicator_green"></div>
-            <div class="indicator indicator_yellow"></div>
-            <div class="indicator indicator_red"></div>
-            <div class="indicator indicator_black"></div>
+      <header>
+        <div class="name-wrapper">
+          <h1>Угадай число!</h1>
+          <a
+            id="hint"
+            target="_blank"
+            href="https://letmegooglethat.com/?q=%D1%87%D0%B8%D1%81%D0%BB%D0%B0+%D0%BE%D1%82+1+%D0%B4%D0%BE+9"
+            >от 1 до 9 (подсказка)</a
+          >
         </div>
-        <div class="buttons-wrapper">
-            <button class="new-number-button">Начать заново</button>
-            <p class="lifes-count"></p>
-            <button class="button">Начать игру</button>
-        </div>
-        <div class="link-wrapper"><a href="https://t.me/A_Ilhom" target="_blank" class="ilhom-aliyev-icon icon-editable-ilhom-aliyev-logo"></a></div>
+        <div class="lifes-block"></div>
+      </header>
+      <div class="indicator-wrapper">
+        <div class="indicator indicator_black"></div>
+        <div class="indicator indicator_red"></div>
+        <div class="indicator indicator_yellow"></div>
+        <div class="indicator indicator_green"></div>
+        <div class="indicator indicator_yellow"></div>
+        <div class="indicator indicator_red"></div>
+        <div class="indicator indicator_black"></div>
+      </div>
+      <div class="buttons-wrapper">
+        <button id="restart-btn">Начать заново</button>
+        <button id="try-btn">Начать игру</button>
+      </div>
+      <div class="link-wrapper">
+        <a
+          href="https://t.me/ilhomaliyev"
+          target="_blank"
+          class="ilhom-aliyev-icon icon-editable-ilhom-aliyev-logo"
+        ></a>
+      </div>
     </div>
+    <img src="./img/background.jpg" alt="background" id="background" />
     <script src="./js/script.js"></script>
-</body>
-
+  </body>
 </html>
